@@ -6,10 +6,10 @@
     <subsystem xmlns="urn:jboss:domain:messaging-activemq:2.0">
         <server name="default"
                 persistence-enabled="true">
+            <cluster password="${jboss.messaging.cluster.password:CHANGE ME!!}" />
             <journal type="ASYNCIO"
                      file-size="102400"
                      min-files="2" />
-            <cluster password="${jboss.messaging.cluster.password:CHANGE ME!!}" />
 
             <shared-store-master />
 
@@ -74,10 +74,10 @@
         </server>
         <server name="backuper-server"
                 persistence-enabled="true">
+            <cluster password="${jboss.messaging.cluster.password:CHANGE ME!!}" />
             <journal type="ASYNCIO"
                      file-size="102400"
                      min-files="2" />
-            <cluster password="${jboss.messaging.cluster.password:CHANGE ME!!}" />
 
             <shared-store-slave />
 
